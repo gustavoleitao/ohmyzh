@@ -9,7 +9,7 @@ Primeiro instale o zsh e o oh-my-zsh:
 ```shell
 $ sudo dnf install zsh -y
 $ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-$ chsh -s /bin/zsh root
+$ sudo chsh -s /bin/zsh root
 ```
 
 Em seguida, instale o tema:
