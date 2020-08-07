@@ -2,17 +2,14 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="~/.oh-my-zsh"
+export ZSH="/home/gustavo/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="spaceship"
-SPACESHIP_PROMPT_ORDER=(
-    dir host git exec_time line_sep vi_mode jobs exit_code char
-)
-SPACESHIP_HOST_SHOW=always
+
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
 # a theme from this variable instead of looking in $ZSH/themes/
@@ -48,7 +45,7 @@ SPACESHIP_HOST_SHOW=always
 # ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
-COMPLETION_WAITING_DOTS="true"
+# COMPLETION_WAITING_DOTS="true"
 
 # Uncomment the following line if you want to disable marking untracked files
 # under VCS as dirty. This makes repository status check for large repositories
@@ -61,7 +58,7 @@ COMPLETION_WAITING_DOTS="true"
 # "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
 # or set a custom format using the strftime function format specifications,
 # see 'man strftime' for details.
-HIST_STAMPS="dd.mm.yyyy"
+# HIST_STAMPS="mm/dd/yyyy"
 
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
@@ -72,16 +69,20 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    ansible     kubectl           helm
-    git         sudo 	            dirhistory
-    docker 	    docker-compose
-    dirhistory  colored-man-pages zsh-completions 
-    zsh-autosuggestions 
-    history-substring-search 	    fast-syntax-highlighting
-    )
+git	kubectl		helm
+docker	docker-compose	dirhistory
+sudo	zsh-autosuggestions
+)
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
+
+ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=6,bg=black"
+
+SPACESHIP_PROMPT_ORDER=(
+    dir host git exec_time line_sep vi_mode jobs exit_code char
+)
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
